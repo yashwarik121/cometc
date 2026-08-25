@@ -15,11 +15,17 @@ import argparse
 from pathlib import Path
 from collections import defaultdict
 
-# Ensure UTF-8 output encoding on Windows terminals
+# Configure UTF-8 with error replacement for Windows terminals (CMD / PowerShell)
+if sys.platform == "win32":
+    try:
+        os.system("chcp 65001 > nul 2>&1")
+    except Exception:
+        pass
+
 if hasattr(sys.stdout, "reconfigure"):
-    sys.stdout.reconfigure(encoding="utf-8")
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 if hasattr(sys.stderr, "reconfigure"):
-    sys.stderr.reconfigure(encoding="utf-8")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
 # Add project root to path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -190,13 +196,13 @@ def print_results(results: list[dict], verbose: bool = False):
 
     # Per-case results
     for r in results:
-        status = "✅ PASS" if r["passed"] else "❌ FAIL"
+        status = "[PASS]" if r["passed"] else "[FAIL]"
         print(f"\n  {r['id']} [{r['category']}] {status}")
         print(f"    {r['description']}")
 
         if verbose or not r["passed"]:
             for a in r["assertions"]:
-                marker = "  ✓" if a["passed"] else "  ✗"
+                marker = "  [+]" if a["passed"] else "  [-]"
                 print(f"    {marker} {a['detail']}")
             if not r["passed"]:
                 print(f"    Response: {r['response'][:150]}...")
@@ -217,8 +223,8 @@ def print_results(results: list[dict], verbose: bool = False):
 
     for cat, counts in sorted(categories.items()):
         pct = (counts["passed"] / counts["total"] * 100) if counts["total"] > 0 else 0
-        bar = "█" * int(pct / 10) + "░" * (10 - int(pct / 10))
-        print(f"  {cat:15s} {bar} {counts['passed']}/{counts['total']} ({pct:.0f}%)")
+        bar = "#" * int(pct / 10) + "-" * (10 - int(pct / 10))
+        print(f"  {cat:15s} [{bar}] {counts['passed']}/{counts['total']} ({pct:.0f}%)")
 
     print(f"\n  {'TOTAL':15s}        {total_pass}/{total_cases} ({total_pass/total_cases*100:.0f}%)")
     print("=" * 70)
@@ -268,7 +274,7 @@ def main():
         start = time.time()
         result = run_single_case(case, retriever, args.verbose)
         elapsed = time.time() - start
-        status = "✅" if result["passed"] else "❌"
+        status = "[PASS]" if result["passed"] else "[FAIL]"
         print(f" {status} ({elapsed:.1f}s)")
         results.append(result)
 
