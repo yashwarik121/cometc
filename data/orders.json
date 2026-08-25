@@ -1,0 +1,414 @@
+[
+  {
+    "order_id": "AR-12345",
+    "customer_name": "Sarah Chen",
+    "customer_email": "sarah.chen@example.com",
+    "shipping_address": {
+      "street": "123 Maple St",
+      "city": "Seattle",
+      "state": "WA",
+      "zip": "98101",
+      "country": "US"
+    },
+    "items": [
+      {
+        "product_name": "Meridian Sofa (Charcoal)",
+        "quantity": 1,
+        "unit_price": 1299.00
+      }
+    ],
+    "order_total": 1299.00,
+    "order_date": "2025-12-01T10:30:00Z",
+    "status": "delivered",
+    "tracking_number": "TRK-88441",
+    "carrier": "UPS",
+    "estimated_delivery": "2025-12-12T17:00:00Z",
+    "actual_delivery": "2025-12-10T14:23:00Z",
+    "internal_notes": "VIP customer, flagged for loyalty upgrade",
+    "risk_score": 5,
+    "payment_method": "Visa **** 4242",
+    "cancellation_reason": null,
+    "return_reason": null
+  },
+  {
+    "order_id": "AR-12346",
+    "customer_name": "James Wilson",
+    "customer_email": "jwilson88@example.com",
+    "shipping_address": {
+      "street": "456 Oak Ave",
+      "city": "Austin",
+      "state": "TX",
+      "zip": "78701",
+      "country": "US"
+    },
+    "items": [
+      {
+        "product_name": "Haven Bed Frame (Queen, Natural Oak)",
+        "quantity": 1,
+        "unit_price": 899.00
+      },
+      {
+        "product_name": "Dusk Nightstand",
+        "quantity": 2,
+        "unit_price": 199.00
+      }
+    ],
+    "order_total": 1297.00,
+    "order_date": "2025-12-28T09:15:00Z",
+    "status": "shipped",
+    "tracking_number": "TRK-88442",
+    "carrier": "FedEx",
+    "estimated_delivery": "2026-01-15T18:00:00Z",
+    "actual_delivery": null,
+    "internal_notes": "Address verified via phone",
+    "risk_score": 15,
+    "payment_method": "Mastercard **** 5555",
+    "cancellation_reason": null,
+    "return_reason": null
+  },
+  {
+    "order_id": "AR-12347",
+    "customer_name": "Maria Rodriguez",
+    "customer_email": "mrodriguez@example.com",
+    "shipping_address": {
+      "street": "789 Pine Blvd",
+      "city": "Miami",
+      "state": "FL",
+      "zip": "33101",
+      "country": "US"
+    },
+    "items": [
+      {
+        "product_name": "Arc Floor Lamp",
+        "quantity": 1,
+        "unit_price": 249.00
+      },
+      {
+        "product_name": "Ember Table Lamp",
+        "quantity": 1,
+        "unit_price": 129.00
+      }
+    ],
+    "order_total": 378.00,
+    "order_date": "2025-12-29T11:45:00Z",
+    "status": "cancelled",
+    "tracking_number": null,
+    "carrier": null,
+    "estimated_delivery": null,
+    "actual_delivery": null,
+    "internal_notes": "Customer called twice, frustrated",
+    "risk_score": 10,
+    "payment_method": "Amex **** 1234",
+    "cancellation_reason": "Customer requested cancellation - duplicate order",
+    "return_reason": null
+  },
+  {
+    "order_id": "AR-12348",
+    "customer_name": "Alex Thompson",
+    "customer_email": "alex.thompson99@example.com",
+    "shipping_address": {
+      "street": "321 Elm St",
+      "city": "Denver",
+      "state": "CO",
+      "zip": "80202",
+      "country": "US"
+    },
+    "items": [
+      {
+        "product_name": "Luna Coffee Table",
+        "quantity": 1,
+        "unit_price": 499.00
+      }
+    ],
+    "order_total": 499.00,
+    "order_date": "2026-01-05T14:20:00Z",
+    "status": "processing",
+    "tracking_number": null,
+    "carrier": null,
+    "estimated_delivery": null,
+    "actual_delivery": null,
+    "internal_notes": "Payment verification pending - new account",
+    "risk_score": 45,
+    "payment_method": "Visa **** 9876",
+    "cancellation_reason": null,
+    "return_reason": null
+  },
+  {
+    "order_id": "AR-12349",
+    "customer_name": "Priya Patel",
+    "customer_email": "ppatel@example.com",
+    "shipping_address": {
+      "street": "654 Cedar Ln",
+      "city": "San Francisco",
+      "state": "CA",
+      "zip": "94107",
+      "country": "US"
+    },
+    "items": [
+      {
+        "product_name": "Solstice Pillow Set",
+        "quantity": 2,
+        "unit_price": 89.00
+      },
+      {
+        "product_name": "Horizon Throw Blanket",
+        "quantity": 1,
+        "unit_price": 149.00
+      }
+    ],
+    "order_total": 327.00,
+    "order_date": "2025-11-15T08:10:00Z",
+    "status": "returned",
+    "tracking_number": "TRK-88444",
+    "carrier": "USPS",
+    "estimated_delivery": "2025-11-20T17:00:00Z",
+    "actual_delivery": "2025-11-19T11:30:00Z",
+    "internal_notes": "Refund processed 2025-12-20, customer satisfied",
+    "risk_score": 8,
+    "payment_method": "Mastercard **** 4321",
+    "cancellation_reason": null,
+    "return_reason": "Color did not match website photos"
+  },
+  {
+    "order_id": "AR-12350",
+    "customer_name": "Robert Kim",
+    "customer_email": "rkim@corporate.example.com",
+    "shipping_address": {
+      "street": "987 Birch Rd",
+      "city": "Chicago",
+      "state": "IL",
+      "zip": "60601",
+      "country": "US"
+    },
+    "items": [
+      {
+        "product_name": "Horizon Throw Blanket (Terracotta)",
+        "quantity": 3,
+        "unit_price": 149.00
+      }
+    ],
+    "order_total": 447.00,
+    "order_date": "2025-11-20T13:45:00Z",
+    "status": "delivered",
+    "tracking_number": "TRK-88445",
+    "carrier": "USPS",
+    "estimated_delivery": "2025-11-30T17:00:00Z",
+    "actual_delivery": "2025-11-28T09:15:00Z",
+    "internal_notes": "Bulk order for corporate gifting",
+    "risk_score": 20,
+    "payment_method": "Visa **** 1111",
+    "cancellation_reason": null,
+    "return_reason": null
+  },
+  {
+    "order_id": "AR-12351",
+    "customer_name": "Emma Davis",
+    "customer_email": "emma.davis@example.com",
+    "shipping_address": {
+      "street": "147 Spruce Way",
+      "city": "Portland",
+      "state": "OR",
+      "zip": "97204",
+      "country": "US"
+    },
+    "items": [
+      {
+        "product_name": "Meridian Sofa (Sage)",
+        "quantity": 1,
+        "unit_price": 1299.00
+      },
+      {
+        "product_name": "Luna Coffee Table",
+        "quantity": 1,
+        "unit_price": 499.00
+      }
+    ],
+    "order_total": 1798.00,
+    "order_date": "2026-01-02T16:30:00Z",
+    "status": "shipped",
+    "tracking_number": "TRK-88446",
+    "carrier": "UPS",
+    "estimated_delivery": "2026-01-20T12:00:00Z",
+    "actual_delivery": null,
+    "internal_notes": "High value order, ensure white glove delivery",
+    "risk_score": 12,
+    "payment_method": "Amex **** 7777",
+    "cancellation_reason": null,
+    "return_reason": null
+  },
+  {
+    "order_id": "AR-12352",
+    "customer_name": "David Park",
+    "customer_email": "dpark22@example.com",
+    "shipping_address": {
+      "street": "258 Walnut St",
+      "city": "Boston",
+      "state": "MA",
+      "zip": "02108",
+      "country": "US"
+    },
+    "items": [
+      {
+        "product_name": "Ember Table Lamp",
+        "quantity": 1,
+        "unit_price": 129.00
+      }
+    ],
+    "order_total": 129.00,
+    "order_date": "2025-12-15T10:00:00Z",
+    "status": "return_requested",
+    "tracking_number": "TRK-88447",
+    "carrier": "FedEx",
+    "estimated_delivery": "2025-12-22T17:00:00Z",
+    "actual_delivery": "2025-12-21T15:45:00Z",
+    "internal_notes": "Likely warranty claim, may need replacement instead of refund. Customer sent photos - damage confirmed.",
+    "risk_score": 5,
+    "payment_method": "Visa **** 8888",
+    "cancellation_reason": null,
+    "return_reason": "Arrived with crack in glass shade"
+  },
+  {
+    "order_id": "AR-12353",
+    "customer_name": "Lisa Chang",
+    "customer_email": "lisa.c@example.com",
+    "shipping_address": {
+      "street": "369 Cherry Blvd",
+      "city": "Las Vegas",
+      "state": "NV",
+      "zip": "89101",
+      "country": "US"
+    },
+    "items": [
+      {
+        "product_name": "Haven Bed Frame (King, Espresso)",
+        "quantity": 1,
+        "unit_price": 1099.00
+      },
+      {
+        "product_name": "Dusk Nightstand",
+        "quantity": 2,
+        "unit_price": 199.00
+      },
+      {
+        "product_name": "Meridian Sofa (Oatmeal)",
+        "quantity": 1,
+        "unit_price": 1299.00
+      }
+    ],
+    "order_total": 2796.00,
+    "order_date": "2026-01-10T11:20:00Z",
+    "status": "processing",
+    "tracking_number": null,
+    "carrier": null,
+    "estimated_delivery": null,
+    "actual_delivery": null,
+    "internal_notes": "Large order from new customer, standard verification",
+    "risk_score": 55,
+    "payment_method": "Mastercard **** 2222",
+    "cancellation_reason": null,
+    "return_reason": null
+  },
+  {
+    "order_id": "AR-12354",
+    "customer_name": "Tom Baker",
+    "customer_email": "tbaker@example.com",
+    "shipping_address": {
+      "street": "741 Willow Ct",
+      "city": "Atlanta",
+      "state": "GA",
+      "zip": "30301",
+      "country": "US"
+    },
+    "items": [
+      {
+        "product_name": "Solstice Pillow Set (Sage)",
+        "quantity": 1,
+        "unit_price": 89.00
+      },
+      {
+        "product_name": "Ember Table Lamp",
+        "quantity": 1,
+        "unit_price": 129.00
+      }
+    ],
+    "order_total": 218.00,
+    "order_date": "2025-11-25T14:15:00Z",
+    "status": "delivered",
+    "tracking_number": "TRK-88449",
+    "carrier": "FedEx",
+    "estimated_delivery": "2025-12-05T17:00:00Z",
+    "actual_delivery": "2025-12-01T10:30:00Z",
+    "internal_notes": "Repeat customer, 3rd order this year",
+    "risk_score": 3,
+    "payment_method": "Visa **** 3333",
+    "cancellation_reason": null,
+    "return_reason": null
+  },
+  {
+    "order_id": "AR-12355",
+    "customer_name": "Nina Kowalski",
+    "customer_email": "nina.k@example.com",
+    "shipping_address": {
+      "street": "852 Poplar Dr",
+      "city": "Phoenix",
+      "state": "AZ",
+      "zip": "85001",
+      "country": "US"
+    },
+    "items": [
+      {
+        "product_name": "Arc Floor Lamp",
+        "quantity": 1,
+        "unit_price": 249.00
+      }
+    ],
+    "order_total": 249.00,
+    "order_date": "2026-01-08T09:00:00Z",
+    "status": "cancelled",
+    "tracking_number": null,
+    "carrier": null,
+    "estimated_delivery": null,
+    "actual_delivery": null,
+    "internal_notes": "Customer notified via email, offered 10% off next order as goodwill. IMPORTANT: Do not tell customer about internal stock issues.",
+    "risk_score": 0,
+    "payment_method": "Discover **** 6666",
+    "cancellation_reason": "Item out of stock - cancelled by fulfillment team",
+    "return_reason": null
+  },
+  {
+    "order_id": "AR-12356",
+    "customer_name": "Carlos Mendez",
+    "customer_email": "cmendez.influencer@example.ca",
+    "shipping_address": {
+      "street": "963 Redwood St",
+      "city": "Vancouver",
+      "state": "BC",
+      "zip": "V6B 1A1",
+      "country": "CA"
+    },
+    "items": [
+      {
+        "product_name": "Horizon Throw Blanket (Ivory)",
+        "quantity": 2,
+        "unit_price": 149.00
+      },
+      {
+        "product_name": "Solstice Pillow Set (Cream)",
+        "quantity": 2,
+        "unit_price": 89.00
+      }
+    ],
+    "order_total": 476.00,
+    "order_date": "2026-01-12T15:45:00Z",
+    "status": "shipped",
+    "tracking_number": "TRK-88451",
+    "carrier": "USPS",
+    "estimated_delivery": "2026-02-01T17:00:00Z",
+    "actual_delivery": null,
+    "internal_notes": "International order, customs delay possible. Customer is a social media influencer - handle with care.",
+    "risk_score": 18,
+    "payment_method": "Visa **** 9999",
+    "cancellation_reason": null,
+    "return_reason": null
+  }
+]
