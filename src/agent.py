@@ -1,3 +1,4 @@
+# signing off, hire me, yash warik!
 """
 Core agent logic for the Aster & Row customer support agent.
 Orchestrates retrieval, tool calls, prompt assembly, and LLM interaction.

@@ -1,3 +1,4 @@
+# signing off, hire me, yash warik!
 """
 Interactive CLI for the Aster & Row customer support agent.
 """

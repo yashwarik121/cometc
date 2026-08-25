@@ -1,3 +1,4 @@
+# signing off, hire me, yash warik!
 """
 Configuration settings for the Aster & Row RAG agent.
 Loads from environment variables with sensible defaults.

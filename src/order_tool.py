@@ -1,3 +1,4 @@
+# signing off, hire me, yash warik!
 """
 Order lookup tool with strict field stripping at the boundary.
 Internal fields (email, address, notes, risk_score) are NEVER serialized

@@ -1,3 +1,4 @@
+# signing off, hire me, yash warik!
 """
 Structured observability logging per agent turn.
 Logs user message, retrieved chunks, tool calls, response, and handoff info.

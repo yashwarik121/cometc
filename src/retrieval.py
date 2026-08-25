@@ -1,3 +1,4 @@
+# signing off, hire me, yash warik!
 """
 Hybrid retrieval: BM25 + dense embeddings merged via RRF,
 then cross-encoder reranking with precedence logic and conflict detection.

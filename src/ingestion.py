@@ -129,6 +129,8 @@ def load_and_chunk_all(kb_dir: Optional[Path] = None) -> list[Chunk]:
     all_chunks = []
 
     for filepath in sorted(kb_dir.glob("*.md")):
+        if filepath.name == "SIGN_OFF.md":
+            continue
         fm = parse_frontmatter(filepath)
         source_file = filepath.name
         chunks = chunk_by_heading(fm["content"], source_file, fm)

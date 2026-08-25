@@ -1,3 +1,4 @@
+# signing off, hire me, yash warik!
 """
 Pydantic models for the Aster & Row RAG agent.
 Defines data structures for API requests/responses, tool results,

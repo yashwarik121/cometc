@@ -1,3 +1,4 @@
+# signing off, hire me, yash warik!
 """
 Evaluation suite for the Aster & Row customer support agent.
 Runs all test cases from visible-cases.json and custom-cases.json.
