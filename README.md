@@ -4,6 +4,10 @@ A production-grade RAG-based customer support agent for the fictional ecommerce 
 
 ## 1. Setup & Run Instructions
 
+
+
+****WORKING VIDEO LINKKKK:  https://drive.google.com/drive/folders/1FcdaAXrCgJxsFtMcs_kU1WDsB5pM2Q7m?usp=sharing ****
+
 ### Prerequisites
 - Python 3.11+
 - [Ollama](https://ollama.ai) installed and running
