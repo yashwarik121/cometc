@@ -70,23 +70,7 @@ See [`.env.example`](.env.example):
 | **API** | FastAPI | Async, auto-docs, Pydantic validation. |
 | **Entity Work** | Regex (spaCy omitted) | Order IDs follow a fixed `AR-XXXXX` pattern — regex is more precise and faster than NER for this. |
 
-## 4. Architecture
 
-```
-User → FastAPI/CLI → Session Manager → Agent Core
-                                           ├── Order Tool (sanitized output)
-                                           └── Hybrid Retrieval Pipeline
-                                                 ├── BM25 Search
-                                                 ├── Dense Embedding Search
-                                                 ├── RRF Fusion
-                                                 ├── Cross-Encoder Rerank
-                                                 ├── Precedence Filter
-                                                 └── Conflict Detection
-                                           → Prompt Assembly (system + context + history)
-                                           → Ollama/Mistral
-                                           → Response Validation & Source Extraction
-                                           → Trace Logging
-```
 
 **Key design decisions:**
 - **Field stripping at the tool boundary**: `SafeOrderResult` Pydantic model physically excludes internal fields (email, address, notes, risk score). The LLM never sees them — this is a structural guarantee, not a prompt instruction.
@@ -165,31 +149,7 @@ See [`bug_diary.md`](bug_diary.md) for full details. Summary:
 - A/B testing framework for prompt variants
 - User feedback collection on response quality
 
-## 9. AI Coding Tools Used
-
-This project was built with **Google Antigravity (Claude Opus 4.6)** for code generation and architecture planning.
-
-**What it was used for:**
-- Architecture design and file structure planning
-- Writing boilerplate (Pydantic models, FastAPI endpoints, CLI scaffold)
-- Generating fixture data (knowledge base docs, mock orders, test cases)
-- Drafting the evaluation framework
-
-**Concrete example of an AI suggestion that was wrong:**
-The AI initially suggested using ChromaDB's native hybrid search (`Rrf()` class) from v1.5+. However, when implementing, the `rank_bm25` library needed to stay as a standalone index because:
-1. ChromaDB's built-in BM25 doesn't expose individual scores needed for debugging/logging
-2. The precedence logic requires chunk-level metadata that's easier to access from a separate index
-3. The manual RRF implementation gives control over the `k` parameter for tuning
-
-The AI's approach would have worked but sacrificed observability and debuggability.
 
 ## 10. Demo
 
-> **TODO**: Record a 2-4 minute demo GIF/video showing:
-> 1. A cited KB answer (shipping policy query)
-> 2. An order lookup (AR-12345)
-> 3. A multi-turn exchange (order follow-up)
-> 4. A correct refusal/handoff (cancel request)
-> 5. The eval suite running
-
-<!-- ![Demo](demo.gif) -->
+https://drive.google.com/drive/folders/1FcdaAXrCgJxsFtMcs_kU1WDsB5pM2Q7m?usp=sharing
